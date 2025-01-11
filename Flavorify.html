@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/themes/prism-tomorrow.min.css">
+    
+    <style>
+
+.font-face {
+  font-family: 'Railey';
+  src: url('path-to-your-font/Railey-PersonalUse.ttf') format('truetype');
+}
+
+
+        :root {
+            --primary: #1b3c3d;
+            --secondary: #28556a;
+            --accent: #ffd700;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+        }
+     
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Railey', sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            font-size: 16 px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card_1{
+            background: white;
+            border-radius: 8px;
+            font-style: normal;
+            padding: 10 px;
+            padding: 2rem;
+            font-size: 10 px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .er-diagram {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .er-diagram img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="icon_01.jpg" alt="App Logo" class="nav-logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#description">Description</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#diagram">ER Diagram</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+        <section id="home" class="hero">
+            <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #d2cb75 ;">Flavorify</h1>
+            <p>Discover delicious recipes with an intuitive interface powered by a robust MySQL</p>
+            <a href="#description" class="button">Learn More</a>
+        </section>
+
+        <section id="description" class="card_1">
+            <h2>Project Description</h2>
+            <p>
+                <h1>
+                    Organized Recipe Management with MySQL 
+                </h1> <p> At the heart of Flavorify, Zulqarnain kayani  built a powerful MySQL database to ensure seamless organization and retrieval of recipe data. From simple snacks to gourmet dishes, our database keeps it all accessible and easy to manage..</p></p></p>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                     <h3>Kotlin</h3>
+                    <p style="text-align: left;">The Kotlin section showcases the primary programming language used to develop the Flavorify app. Kotlin is a modern, concise, and expressive language that powers the app’s functionality. Key highlights:</p>
+                    <h5 style="text-align: left;">User-Friendly Design:</h5><p style="text-align: left;">Kotlin’s syntax is clean and concise, allowing for a faster and more intuitive development process.</p>
+                    <h5 style="text-align: left;">Database Integration: </h5><p style="text-align: left;"> Kotlin works seamlessly with JDBC to interact with the MySQL database, enabling smooth communication between the frontend and backend.</p>
+                    <h5 style="text-align: left;">Asynchronous Tasks:  </h5><p style="text-align: left;">Kotlin's coroutines are used to handle database operations efficiently, ensuring a responsive user experience.</p>
+                    <h5 style="text-align: left;">Scalability:</h5><p style="text-align: left;">Kotlin's robust features make it easy to add new features and scale the app as needed.</p>
+                </div>
+                <div class="feature">
+                    <h3>JDBC</h3>
+                    <p style="text-align: left;">The Java Database Connectivity (JDBC) section focuses on how the Flavorify app interacts with the MySQL database. JDBC is the middleware that bridges Kotlin code and the database, ensuring smooth data exchange. Key points include:</p>
+                    <h5 style="text-align: left;">Database Access: </h5><p style="text-align: left;">JDBC enables the app to send SQL queries to the database and retrieve results in real-time. </p>
+                    <h5 style="text-align: left;">Driver Management  </h5><p style="text-align: left;">JDBC handles communication with the MySQL driver to ensure compatibility and performance.</p>
+                    <h5 style="text-align: left;">Security: </h5><p style="text-align: left;"> JDBC uses secure query handling techniques.</p>
+                </div>
+                <div class="feature">
+                    <h3>My SQL</h3>
+                    <p style="text-align: left;">The SQL (Structured Query Language) section highlights how Flavorify leverages the power of databases to store, organize, and retrieve recipe data. SQL serves as the backbone for managing recipe information in the Flavorify app by enabling:</p>
+                    <h5 style="text-align: left;">Data Storage: </h5><p style="text-align: left;">Recipes are stored in a MySQL database with fields for names, descriptions, ingredients, procedures, and images.</p>
+                    <h5 style="text-align: left;">Querying:  </h5><p style="text-align: left;">SQL queries allow efficient searching and filtering of recipes by name, ingredients, or other parameters.</p>
+                    <h5 style="text-align: left;">Scalability: </h5><p style="text-align: left;">The database structure is designed to handle thousands of recipes seamlessly.</p>
+                    <h5 style="text-align: left;">Relational Data :</h5><p style="text-align: left;">SQL ensures consistency and accuracy in managing the relationships between recipes and their attributes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="code" class="card">
+            <h2>Code  in Git-hub</h2>
+            <p>Front end and Backend</p>
+            <p>My MySQL </p>
+            <div class="code-block">
+                <pre><code class="language-javascript">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="diagram" class="card">
+            <h2>ER Diagram</h2>
+            <div class="er-diagram">
+                <!-- Replace 'your-image-url-here' with your actual image URL -->
+                <img src="your-image-url-here" alt="ER Diagram">
+            </div>
+        </section>
+
+        <section id="features" class="card">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Scalable Architecture</h3>
+                    <p>Built to handle growing user bases and increasing data loads with efficient resource utilization.</p>
+                </div>
+                <div class="feature">
+                    <h3>Real-time Updates</h3>
+                    <p>Instant data synchronization across all connected clients using WebSocket technology.</p>
+                </div>
+                <div class="feature">
+                    <h3>Advanced Analytics</h3>
+                    <p>Comprehensive data analysis and visualization tools for better decision making.</p>
+                </div>
+                <div class="feature">
+                    <h3>Cloud Integration</h3>
+                    <p>Seamless integration with major cloud providers for reliable and secure deployment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
